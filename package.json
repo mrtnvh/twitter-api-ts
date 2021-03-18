@@ -1,6 +1,6 @@
 {
   "name": "@mrtnvh/twitter-api-ts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Twitter v2 API client on TypeScript",
   "scripts": {
     "generate": "node generate.js",
