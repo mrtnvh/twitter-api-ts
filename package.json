@@ -1,0 +1,62 @@
+{
+  "name": "@mrtnvh/twitter-api-ts",
+  "version": "0.1.0",
+  "description": "Twitter v2 API client on TypeScript",
+  "scripts": {
+    "generate": "node generate.js",
+    "build": "pika build",
+    "prepublishOnly": "run-s generate build",
+    "release": "npm publish pkg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanhoofmaarten/twitter-api-ts.git"
+  },
+  "files": [
+    "pkg"
+  ],
+  "keywords": [
+    "twitter",
+    "api",
+    "typescript"
+  ],
+  "author": "@mrtnvh",
+  "license": "MIT",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/vanhoofmaarten/twitter-api-ts/issues"
+  },
+  "homepage": "https://github.com/vanhoofmaarten/twitter-api-ts#readme",
+  "dependencies": {
+    "openapi-typescript-codegen": "^0.9.2"
+  },
+  "devDependencies": {
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-node": "^0.9.2",
+    "@pika/plugin-build-types": "^0.9.2",
+    "@pika/plugin-build-web": "^0.9.2",
+    "@pika/plugin-bundle-node": "^0.9.2",
+    "@pika/plugin-bundle-web": "^0.9.2",
+    "@pika/plugin-ts-standard-pkg": "^0.9.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.5"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-types"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ]
+    ]
+  }
+}
