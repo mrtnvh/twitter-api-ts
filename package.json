@@ -5,8 +5,8 @@
   "scripts": {
     "generate": "node generate.js",
     "build": "pika build",
-    "prepublishOnly": "run-s generate build",
-    "release": "npm publish pkg"
+    "prerelease": "run-s generate build",
+    "release": "npm publish pkg --access public"
   },
   "repository": {
     "type": "git",
